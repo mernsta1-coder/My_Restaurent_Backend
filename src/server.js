@@ -16,7 +16,13 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors({ origin: "*" }));
+app.use(cors({   origin: [
+    "https://my-restaurent-frontend.vercel.app",
+    "http://localhost:5173"  // local dev
+  ],
+  methods: ["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
+  credentials: true
+}));
 
 app.use('/api/users',router);
 app.use('/api/users/api/cart', cart);

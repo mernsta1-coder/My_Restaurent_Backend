@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.post("/add", authenticateToken, addToCart);
 router.get("/get", authenticateToken, getCart);
-router.delete("/:productId", authenticateToken, removeFromCart);
+router.delete("/delete/:productId", authenticateToken, removeFromCart);
 router.put("/update", authenticateToken, updateQuantity);
 
 export default router;

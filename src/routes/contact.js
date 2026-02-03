@@ -10,7 +10,7 @@ import { validateContact } from "../middleware/contact.js";
 const router = express.Router();
 
 router.post("/contact", validateContact, sendMessage);
-router.get("/contact", getAllMessages);
+router.get("/get/contact", getAllMessages);
 router.delete("/contact/:id", deleteMessage);
 
 export default router;

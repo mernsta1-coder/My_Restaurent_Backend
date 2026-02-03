@@ -11,6 +11,6 @@ const router = express.Router();
 
 router.post("/book", validateBooking, createBooking);
 router.get("/all", getAllBookings);
-router.delete("/:id", deleteBooking);
+router.delete("/delete/:id", deleteBooking);
 
 export default router;

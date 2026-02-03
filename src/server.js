@@ -25,11 +25,11 @@ app.use(cors({   origin: [
 }));
 
 app.use('/api/users',router);
-app.use('/api/users/api/cart', cart);
-app.use('/api/users/api',mail);
-app.use('/api/users/api/booking', bookingTable);
-app.use("/api/users/api/contact", contactRoutes);
-app.use(`/api/users/api/order`, orderRoute);
+app.use('/api/users/cart', cart);
+app.use('/api/users/mail',mail);
+app.use('/api/users/booking', bookingTable);
+app.use("/api/users/contact", contactRoutes);
+app.use(`/api/users/order`, orderRoute);
 
 
 
